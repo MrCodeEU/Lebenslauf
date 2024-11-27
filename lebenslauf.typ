@@ -187,21 +187,21 @@
 
       #education-entry(
         "Computer Science Master",
-        "JKU Linz",
-        "2021 - Heute",
+        "Johannes Kepler Universität Linz",
+        "2024 - Heute",
         ("Major: Networks and IT Security",)
       )
 
       #education-entry(
         "Bachelor Informatik",
-        "JKU Linz",
+        "Johannes Kepler Universität Linz",
         "2021 - 2024",
         ("Bachelorarbeit: Optimizing LSTM-based Speaker Diarization: Comparing Architectures and Clustering Methods",)
       )
 
       #education-entry(
         "BHS Matura Mechatronik",
-        "HTL Steyr",
+        "Höhere Technische Lehranstalt Steyr",
         "2015 - 2020",
         ("Schwerpunkt: Mechatronik",)
       )
@@ -255,7 +255,7 @@
       #v(5pt) // Add some spacing between entries
 
       #experience-entry(
-        "Praktikant",
+        "Ferialpraktikant - Softwareentwicklung",
         "Vento GmbH - Hagenberg",
         "07.2024 - 07.2024",
         (
@@ -279,7 +279,7 @@
       #v(5pt) // Add some spacing between entries
 
       #experience-entry(
-        "Ferialpraktikant",
+        "Ferialpraktikant - Softwareentwicklung",
         "Bosch GMBH - Engineering Center Linz",
         "08.2023 - 09.2023",
         (
@@ -292,7 +292,7 @@
       #v(5pt) // Add some spacing between entries
 
       #experience-entry(
-        "Ferialpraktikant",
+        "Ferialpraktikant - Montage und Testen",
         "Bosch Rexroth GMBH - Pasching",
         "06.2021 - 06.2021",
         (

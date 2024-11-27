@@ -19,7 +19,7 @@
           fill: white,
           size: 16pt,
           weight: "bold",
-        )[Motivationsschreiben],
+        )[Motivationsschreiben]
       ]
     ],
   )
@@ -73,7 +73,7 @@
     ]
   ]
 
-  v(3em)
+  v(1em)
   [Mit freundlichen Grüßen \
     #v(2mm)
     #image("unterschrift_black.png", width: 45mm)
