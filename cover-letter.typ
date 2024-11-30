@@ -57,7 +57,7 @@
   text(fill: primary-color, weight: 900, size: 14pt)[*Bewerbung als #position*]
 
   v(5mm)
-  [Sehr geehrte Damen und Herren!]
+  [Sehr geehrte Damen und Herren,]
 
   v(3mm)
 
