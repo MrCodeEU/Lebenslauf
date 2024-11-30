@@ -1,6 +1,11 @@
 #import "@preview/fontawesome:0.5.0": *
 
-#let cover-letter(body) = {
+#let cover-letter(
+  company-name: "",
+  company-address: "",
+  position: "",
+  letter-content: "",
+) = {
   set document(author: "Michael Reinegger", title: "Motivationsschreiben")
   set text(font: "Lucida Sans", lang: "de", weight: "medium", size: 10pt)
   set page(margin: (left: 25mm, right: 25mm, top: 15mm, bottom: 30mm))
@@ -30,10 +35,8 @@
     align(left)[
       #v(2mm)
       #text(fill: text-gray)[
-        Firma XYZ GmbH \
-        z.Hd. Personalabteilung \
-        Unternehmensstraße 1 \
-        A-1234 Wien
+        #company-name \
+        #company-address
       ]
     ],
     align(right)[
@@ -51,7 +54,7 @@
   text(fill: text-gray)[Kronstorf, am #datetime.today().display("[day].[month].[year]")]
 
   v(8mm)
-  text(fill: primary-color, weight: 900, size: 14pt)[*Bewerbung als TODO*]
+  text(fill: primary-color, weight: 900, size: 14pt)[*Bewerbung als #position*]
 
   v(5mm)
   [Sehr geehrte Damen und Herren!]
@@ -64,11 +67,8 @@
     inset: (left: 8pt),
   )[
     #par(justify: true)[
-      TODO: Add your motivation letter here \ \
-      #lorem(50)
+      #letter-content
 
-      #lorem(50)
-      \ \
       Ich freue mich über die Möglichkeit eines persönlichen Gesprächs.
     ]
   ]
@@ -85,5 +85,3 @@
     //- Zeugnisse
   ]
 }
-
-#cover-letter[]
