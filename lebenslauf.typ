@@ -340,7 +340,7 @@
       = PROJEKTE
 
       #experience-entry(
-        "HTML, CSS, JavaScript",
+        "HTML, CSS, JavaScript, GitHub Actions, Caddy Server",
         "Persönliche Homepage - mljr.eu",
         link("https://mljr.eu")[mljr.eu],
         (
@@ -353,7 +353,7 @@
       #v(5pt)
 
       #experience-entry(
-        "SvelteKit",
+        "SvelteKit, Bash, TailwindCSS, RESTful APIs",
         "Dashboard - Office TV",
         link("https://github.com/MrCodeEU/dashboard")[Github],
         (
@@ -365,7 +365,7 @@
             #v(5pt)
 
       #experience-entry(
-        "Python",
+        "Python, Torch, Pyannote, Keras, Scikit-learn, Matplotlib",
         "Bachelorarbeit - Speaker Diarization",
         link("https://github.com/MrCodeEU/LSTM-Based-Speaker-Diarization")[Github],
         (
