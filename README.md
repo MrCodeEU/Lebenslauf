@@ -1,2 +1,2 @@
 # Lebenslauf and Motivationsschreiben in Typst
-This repo conains my current Lebenslauf and a sample Motivationsschreiben written in Typst.
+This repo contains my current Lebenslauf and a sample Motivationsschreiben written in Typst.

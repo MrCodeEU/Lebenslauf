@@ -244,8 +244,8 @@
 
       // Remove the outer block and stack, just list entries directly
       #experience-entry(
-        "Tutor",
-        "JKU Linz - Institute for Complex Systems",
+        "Studentischer Mitarbeiter",
+        "JKU Linz - Institute für Complexe Systems",
         "10.2024 - Aktuell",
         (
           "Korrektur von Hausaufgaben für Digitale Schaltungen",
@@ -267,7 +267,7 @@
       #v(5pt) // Add some spacing between entries
 
       #experience-entry(
-        "Tutor",
+        "Studentischer Mitarbeiter",
         "JKU Linz - Institute for Complex Systems",
         "10.2023 - 06.2024",
         (
