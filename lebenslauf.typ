@@ -376,7 +376,7 @@
       )
 
       #experience-entry(
-        "Flutter, Dart, Kotlin, PocketBase",
+        "Flutter, Dart, Kotlin (Ktor), PocketBase, SQL",
         "Brettspiele Statistik App",
         link("https://github.com/MrCodeEU/")[In Entwicklung],
         (
