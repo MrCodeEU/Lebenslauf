@@ -69,7 +69,7 @@
     #par(justify: true)[
       #letter-content
 
-      Ich freue mich über die Möglichkeit eines persönlichen Gesprächs.
+
     ]
   ]
 
