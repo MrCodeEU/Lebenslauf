@@ -179,7 +179,7 @@
           #v(4pt)
           #list(
             spacing: 0.75em,
-            marker: text(fill: primary-color, "•"),
+            marker: text(fill: primary-color, "◈"),
             ..details
           )
         ]
@@ -220,7 +220,7 @@
         inset: (x: 0pt, y: 5pt),
         fill: white,
         radius: 4pt,
-        breakable: false,  // Make individual entries non-breakable
+        breakable: false,
       )[
         #block(
           width: 100%,
@@ -236,7 +236,7 @@
 
           #list(
             spacing: 0.7em,
-            marker: text(fill: primary-color, "•"),
+            marker: text(fill: primary-color, "◈"),
             ..details
           )
         ]
@@ -376,7 +376,7 @@
       )
 
       #experience-entry(
-        "Kotlin, Flutter",
+        "Flutter, Dart, Kotlin, PocketBase",
         "Brettspiele Statistik App",
         link("https://github.com/MrCodeEU/")[In Entwicklung],
         (
