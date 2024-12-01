@@ -374,15 +374,27 @@
           "Vergleich verschiedener Clustering Methoden und Architekturen"
         )
       )
+                  #v(5pt)
+
+      // #experience-entry(
+      //   "Flutter, Dart, Kotlin (Ktor), PocketBase, SQL",
+      //   "Brettspiele Statistik App",
+      //   link("https://github.com/MrCodeEU/")[In Entwicklung],
+      //   (
+      //     "Accountverwaltung und Statistiken für Brettspiele",
+      //     "Entwicklung einer mobilen App und Webseite mit Flutter",
+      //     "Eine REST API für die Kommunikation mit der SQL-Datenbank"
+      //   )
+      // )
 
       #experience-entry(
-        "Flutter, Dart, Kotlin (Ktor), PocketBase, SQL",
-        "Brettspiele Statistik App",
-        link("https://github.com/MrCodeEU/")[In Entwicklung],
+        "Kotlin, Kotlin Multiplatform/Compose",
+        "Multiplatform Game of Life",
+        link("https://github.com/MrCodeEU/Game-of-Life-Multiplatform")[Github],
         (
-          "Accountverwaltung und Statistiken für Brettspiele",
-          "Entwicklung einer mobilen App und Webseite mit Flutter",
-          "Eine REST API für die Kommunikation mit der SQL-Datenbank"
+          "Implementierung des Conway's Game of Life in Kotlin Multiplatform",
+          "Verwendung von Compose für die Benutzeroberfläche",
+          "Bereitstellung für Android, Web und Desktop"
         )
       )
     ]
