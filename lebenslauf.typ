@@ -388,7 +388,7 @@
       // )
 
       #experience-entry(
-        "Kotlin, Kotlin Multiplatform/Compose",
+        "Kotlin, Compose Multiplatform UI Framework",
         "Multiplatform Game of Life",
         link("https://github.com/MrCodeEU/Game-of-Life-Multiplatform")[Github],
         (
