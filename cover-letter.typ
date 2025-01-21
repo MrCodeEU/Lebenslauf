@@ -5,6 +5,7 @@
   company-address: "",
   position: "",
   letter-content: "",
+  contact-person: "Damen und Herren",
 ) = {
   set document(author: "Michael Reinegger", title: "Motivationsschreiben")
   set text(font: "Lucida Sans", lang: "de", weight: "medium", size: 10pt)
@@ -57,7 +58,7 @@
   text(fill: primary-color, weight: 900, size: 14pt)[*Bewerbung als #position*]
 
   v(5mm)
-  [Sehr geehrte Damen und Herren,]
+  [Sehr geehrte #contact-person,]
 
   v(3mm)
 

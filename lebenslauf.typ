@@ -23,6 +23,9 @@
     }
   ]
 
+  // Custom styling for links (underlined and colored)
+  show link: it => text(fill: primary-color, underline(it.body))
+
   // Date style function
   let date-style(content) = text(fill: text-gray, weight: "medium")[#content]
 
@@ -52,109 +55,113 @@
     columns: (sidebar_width, 1fr),
     gutter: 5mm,
     // Left column with background
-    block(fill: secondary-color, width: 100%, inset: 10pt, radius: 10pt,{
-      align(left)[
-        // Add profile image
-        #align(center)[
-          #box(
-            width: 120pt,
-            height: 120pt,
-            radius: 60pt,
-            clip: true,
-            image("Michael_Reinegger.jpg")
-          )
-        ]
-        #text(24pt, weight: "bold", primary-color)[Michael Reinegger]
-
-        == KONTAKT
-        #box(width: 100%)[
-          #set par(leading: 1em)
-          #text(fill: text-gray)[
-            #fa-icon("map-pin")#h(.5em) Ahornstraße 8\ #h(1.4em)4484 Kronstorf \
-            #fa-icon("square-phone")#h(.5em) +43 669 10 145155 \
-            #fa-icon("envelope")#h(.5em) #link("mailto:michael-reinegger@tuta.io")[michael-reinegger\@tuta.io] \
-            #fa-icon("cake")#h(.5em) 24.06.2001 in Steyr \
-            #fa-icon("github")#h(.5em) #link("https://github.com/MrCodeEU")[github.com/MrCodeEU] \
-            #fa-icon("linkedin-in")#h(.5em) #link("https://at.linkedin.com/in/MrCodeEU")[linkedin.com/in/MrCodeEU]\
-            #fa-icon("globe")#h(.5em) Homepage: #link("https://mljr.eu")[mljr.eu]
+    block(
+      fill: secondary-color,
+      width: 100%,
+      inset: 10pt,
+      radius: 10pt,
+      {
+        align(left)[
+          // Add profile image
+          #align(center)[
+            #box(
+              width: 120pt,
+              height: 120pt,
+              radius: 60pt,
+              clip: true,
+              image("Michael_Reinegger.jpg"),
+            )
           ]
+          #text(24pt, weight: "bold", primary-color)[Michael Reinegger]
+
+          == KONTAKT
+          #box(width: 100%)[
+            #set par(leading: 1em)
+            #text(fill: text-gray)[
+              #fa-icon("map-pin")#h(.5em) Ahornstraße 8\ #h(1.4em)4484 Kronstorf \
+              #fa-icon("square-phone")#h(.5em) +43 669 10 145155 \
+              #fa-icon("envelope")#h(.5em) #link("mailto:michael-reinegger@tuta.io")[michael-reinegger\@tuta.io] \
+              #fa-icon("cake")#h(.5em) 24.06.2001 in Steyr \
+              #fa-icon("github")#h(.5em) #link("https://github.com/MrCodeEU")[github.com/MrCodeEU] \
+              #fa-icon("linkedin-in")#h(.5em) #link("https://at.linkedin.com/in/MrCodeEU")[linkedin.com/in/MrCodeEU]\
+              #fa-icon("globe")#h(.5em) Homepage: #link("https://mljr.eu")[mljr.eu]
+            ]
+          ]
+
+          #v(0.5em)
+          == Fähigkeiten
+          #text(weight: "bold")[Frontend]
+          #stack(
+            spacing: 0.5em,
+            skill-with-level("JavaScript", 0.7, "js"),
+            skill-with-level("HTML", 0.8, "html5"),
+            skill-with-level("CSS", 0.6, "css3"),
+            skill-with-level("Angular", 0.6, "angular"),
+            skill-with-level("Svelte", 0.6, "s"),
+          )
+
+          #v(0.5em)
+          #text(weight: "bold")[All Purpose/Backend]
+          #stack(
+            spacing: 0.5em,
+            skill-with-level("Java", 0.9, "java"),
+            skill-with-level("C#", 0.9, "#"),
+            skill-with-level("Python", 0.75, "python"),
+            skill-with-level("Node.js", 0.6, "node-js"),
+            skill-with-level("PHP", 0.4, "php"),
+          )
+
+          #v(0.5em)
+          #text(weight: "bold")[Mobile]
+          #stack(
+            spacing: 0.5em,
+            skill-with-level("Flutter", 0.2, "flutter"),
+            skill-with-level("Kotlin", 0.7, "k"),
+          )
+
+          #v(0.5em)
+          #text(weight: "bold")[Systems]
+          #stack(
+            spacing: 0.5em,
+            skill-with-level("C++", 0.3, "c++"),
+            skill-with-level("Rust", 0.5, "rust"),
+            skill-with-level("Go", 0.3, "golang"),
+          )
+
+          #v(1em)
+          #text(weight: "bold")[Software & Tools]
+          #stack(
+            spacing: 0.5em,
+            skill-with-level("MS Office", 0.9, "microsoft"),
+            skill-with-level("Git", 0.7, "git"),
+            skill-with-level("Docker", 0.6, "docker"),
+            skill-with-level("Linux", 0.8, "linux"),
+            skill-with-level("Github Actions", 0.6, "github"),
+            skill-with-level("SQL", 0.6, "database"),
+            skill-with-level("RESTful APIs", 0.6, "api"),
+          )
+
+          == SPRACHEN
+          - Deutsch (Muttersprache)
+          - Englisch (B2)
+          #v(1em)
+
+          == SONSTIGES
+          - PKW-Führerschein
+          #v(1em)
+
+          == HOBBIES
+          - Programmieren
+          - Capture The Flag
+          - Laufen (Weitester Lauf: Wolfganseelauf)
+          - 3D-Druck und CAD-Modellierung (#link("https://www.printables.com/@MrCode_1053723")[3D-Modelle])
+          - Arduino, Raspberry Pi
+          - Kochen und Backen
+          - Wandern
+          - Klettern
         ]
-
-        #v(0.5em)
-        == Fähigkeiten
-        #text(weight: "bold")[Frontend]
-        #stack(
-          spacing: 0.5em,
-          skill-with-level("JavaScript", 0.7, "js"),
-          skill-with-level("HTML", 0.8, "html5"),
-          skill-with-level("CSS", 0.6, "css3"),
-          skill-with-level("Angular", 0.6, "angular"),
-          skill-with-level("Svelte", 0.6, "s"),
-        )
-
-        #v(0.5em)
-        #text(weight: "bold")[All Purpose/Backend]
-        #stack(
-          spacing: 0.5em,
-          skill-with-level("Java", 0.9, "java"),
-          skill-with-level("C#", 0.9, "#"),
-          skill-with-level("Python", 0.75, "python"),
-          skill-with-level("Node.js", 0.6, "node-js"),
-          skill-with-level("PHP", 0.4, "php"),
-        )
-
-        #v(0.5em)
-        #text(weight: "bold")[Mobile]
-        #stack(
-          spacing: 0.5em,
-          skill-with-level("Flutter", 0.2, "flutter"),
-          skill-with-level("Kotlin", 0.7, "k"),
-        )
-
-        #v(0.5em)
-        #text(weight: "bold")[Systems]
-        #stack(
-          spacing: 0.5em,
-          skill-with-level("C++", 0.3, "c++"),
-          skill-with-level("Rust", 0.5, "rust"),
-          skill-with-level("Go", 0.3, "golang"),
-        )
-
-        #v(1em)
-        #text(weight: "bold")[Software & Tools]
-        #stack(
-          spacing: 0.5em,
-          skill-with-level("MS Office", 0.9, "microsoft"),
-          skill-with-level("Git", 0.7, "git"),
-          skill-with-level("Docker", 0.6, "docker"),
-          skill-with-level("Linux", 0.8, "linux"),
-          skill-with-level("Github Actions", 0.6, "github"),
-          skill-with-level("SQL", 0.6, "database"),
-          skill-with-level("RESTful APIs", 0.6, "api"),
-
-        )
-
-        == SPRACHEN
-        - Deutsch (Muttersprache)
-        - Englisch (B2)
-        #v(1em)
-
-        == SONSTIGES
-        - PKW-Führerschein
-        #v(1em)
-
-        == HOBBIES
-        - Programmieren
-        - Capture The Flag
-        - Laufen (Weitester Lauf: Wolfganseelauf)
-        - 3D-Druck
-        - CAD-Modellierung
-        - Arduino, Raspberry Pi
-        - Kochen und Backen
-        - Wandern
-        - Klettern
-      ]
-    }),
+      },
+    ),
     // Right column
     [
       = AUSBILDUNG
@@ -172,15 +179,14 @@
         )[
           #grid(
             columns: (1fr, auto),
-            text(weight: "bold", size: 11pt)[#institution],
-            text(fill: text-gray, style: "normal")[#period]
+            text(weight: "bold", size: 11pt)[#institution], text(fill: text-gray, style: "normal")[#period],
           )
           #text(fill: primary-color, weight: "medium")[#degree]
           #v(4pt)
           #list(
             spacing: 0.75em,
             marker: text(fill: primary-color, "◈"),
-            ..details
+            ..details,
           )
         ]
       ]
@@ -189,28 +195,28 @@
         "Computer Science Master",
         "Johannes Kepler Universität Linz",
         "2024 - Heute",
-        ("Major: Networks and IT Security",)
+        ("Major: Networks and IT Security",),
       )
 
       #education-entry(
         "Bachelor Informatik",
         "Johannes Kepler Universität Linz",
         "2021 - 2024",
-        ("Bachelorarbeit: Optimizing LSTM-based Speaker Diarization: Comparing Architectures and Clustering Methods",)
+        ("Bachelorarbeit: Optimizing LSTM-based Speaker Diarization: Comparing Architectures and Clustering Methods",),
       )
 
       #education-entry(
         "BHS Matura Mechatronik",
         "Höhere Technische Lehranstalt Steyr",
         "2015 - 2020",
-        ("Schwerpunkt: Mechatronik",)
+        ("Schwerpunkt: Mechatronik",),
       )
 
       #education-entry(
         "Unterstufe",
         "Bundesrealgymnasium Enns",
         "2011 - 2015",
-        ("Fokus: Naturwissenschaften",)
+        ("Fokus: Naturwissenschaften",),
       )
 
       = BERUFSERFAHRUNG
@@ -230,14 +236,22 @@
           #grid(
             columns: (1fr, auto),
             text(weight: "bold", size: 11pt)[#company],
-            text(fill: text-gray, style: "normal")[#period]
+            if type(period) == array {
+              stack(
+                dir: ltr,
+                spacing: 1em,
+                ..period.map(p => text(fill: text-gray, style: "normal")[#p]),
+              )
+            } else {
+              text(fill: text-gray, style: "normal")[#period]
+            },
           )
           #text(fill: primary-color, weight: "medium")[#role]
 
           #list(
             spacing: 0.7em,
             marker: text(fill: primary-color, "◈"),
-            ..details
+            ..details,
           )
         ]
       ]
@@ -249,7 +263,7 @@
         "10.2024 - Aktuell",
         (
           "Korrektur von Hausaufgaben für Digitale Schaltungen",
-        )
+        ),
       )
 
       #v(5pt) // Add some spacing between entries
@@ -260,8 +274,8 @@
         "07.2024 - 07.2024",
         (
           "Angular und C# Weiterentwicklung eines bestehenden Systems",
-          "UI/UX Entwicklung mit Fokus auf Barrierefreiheit"
-        )
+          "UI/UX Entwicklung mit Fokus auf Barrierefreiheit",
+        ),
       )
 
       #v(5pt) // Add some spacing between entries
@@ -272,8 +286,8 @@
         "10.2023 - 06.2024",
         (
           "Korrektur von Hausaufgaben für Digitale Schaltungen",
-          "Korrektur von Hausaufgaben für Rechnerarchitektur"
-        )
+          "Korrektur von Hausaufgaben für Rechnerarchitektur",
+        ),
       )
 
       #v(5pt) // Add some spacing between entries
@@ -285,8 +299,8 @@
         (
           "Softwareentwicklung verschiedener IT-Systemen",
           "Entwicklung eines Dashboard für Team relevante Informationen mit Sveltekit und TailwindCSS",
-          "Datenabfrage und -verarbeitung mit RESTful APIs, Proxy APIs und HTML-Scraping"
-        )
+          "Datenabfrage und -verarbeitung mit RESTful APIs, Proxy APIs und HTML-Scraping",
+        ),
       )
 
       #v(5pt) // Add some spacing between entries
@@ -297,8 +311,8 @@
         "06.2021 - 06.2021",
         (
           "Montage von Kabelschächten und Schaltkästen",
-          "Aufbau und Testen hydraulischer Anlagen"
-        )
+          "Aufbau und Testen hydraulischer Anlagen",
+        ),
       )
 
       #v(5pt) // Add some spacing between entries
@@ -309,8 +323,8 @@
         "09.2020 - 05.2021",
         (
           "Unterstützung des Büropersonals",
-          "Betreuung von Patienten"
-        )
+          "Betreuung von Patienten",
+        ),
       )
 
       #v(5pt) // Add some spacing between entries
@@ -321,8 +335,8 @@
         "07.2018 - 07.2018",
         (
           "Datenverarbeitung mit Excel",
-          "Mithilfe in der Fertigung"
-        )
+          "Mithilfe in der Fertigung",
+        ),
       )
 
       #v(5pt) // Add some spacing between entries
@@ -333,8 +347,8 @@
         "07.2017 - 07.2017",
         (
           "Mithilfe in der Fertigung",
-          "Elektrische Verkabelung von Spritzgießmaschinen"
-        )
+          "Elektrische Verkabelung von Spritzgießmaschinen",
+        ),
       )
 
       = PROJEKTE
@@ -346,23 +360,23 @@
         (
           "Entwicklung einer persönlichen Website",
           "Landingpage und Lebenslauf mit HTML, CSS und JavaScript",
-          "Verwenden von GitHub Actions für CI/CD"
-        )
+          "Verwenden von GitHub Actions für CI/CD",
+        ),
       )
 
       #v(5pt)
 
       #experience-entry(
-        "SvelteKit, Bash, TailwindCSS, RESTful APIs",
-        "Dashboard - Office TV",
-        link("https://github.com/MrCodeEU/dashboard")[Github],
+        "SvelteKit, Pocketbase, go, TailwindCSS, RESTful APIs",
+        "Sudoku Generator und Printer",
+        (link("https://github.com/MrCodeEU/sudoku-gen")[Github], link("https://sudoku.mljr.eu")[sudoku.mljr.eu]),
         (
-          "Entwicklung eines Dashboards mit SvelteKit",
-          "Verwendung von TailwindCSS für das Styling",
-          "Verwendung von RESTful APIs für die Datenbeschaffung"
-        )
+          "Speichern von generierten Sudokus in einer Datenbank",
+          "Filtern von Sudokus zum Drucken mit oder ohne Lösung und Farben",
+          "Unterstützung für 9x9, 12x12 und 16x16 Sudokus",
+        ),
       )
-            #v(5pt)
+      #v(5pt)
 
       #experience-entry(
         "Python, Torch, Pyannote, Keras, Scikit-learn, Matplotlib",
@@ -371,10 +385,10 @@
         (
           "Implementierung von LSTM-Netzwerken für Speaker Diarization",
           "Training und Evaluierung verschiedener Modelle",
-          "Vergleich verschiedener Clustering Methoden und Architekturen"
-        )
+          "Vergleich verschiedener Clustering Methoden und Architekturen",
+        ),
       )
-                  #v(5pt)
+      #v(5pt)
 
       // #experience-entry(
       //   "Flutter, Dart, Kotlin (Ktor), PocketBase, SQL",
@@ -389,13 +403,16 @@
 
       #experience-entry(
         "Kotlin, Compose Multiplatform UI Framework",
-        "Multiplatform Game of Life",
-        link("https://github.com/MrCodeEU/Game-of-Life-Multiplatform")[Github],
+        "Conway's Game of Life - Multiplatform",
+        (
+          link("https://github.com/MrCodeEU/Game-of-Life-Multiplatform")[Github],
+          link("https://mljr.eu/game-of-life/")[mljr.eu/game-of-life/],
+        ),
         (
           "Implementierung des Conway's Game of Life in Kotlin Multiplatform",
           "Verwendung von Compose für die Benutzeroberfläche",
-          "Bereitstellung für Android, Web und Desktop"
-        )
+          "Bereitstellung für Android, Web und Desktop",
+        ),
       )
     ]
   )
