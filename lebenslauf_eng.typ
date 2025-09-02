@@ -1,8 +1,8 @@
 #import "@preview/fontawesome:0.5.0": *
 
 #let cv(body) = {
-  set document(author: "Michael Reinegger", title: "Lebenslauf")
-  set text(font: "Lucida Sans", lang: "de", weight: "medium", size: 10pt)
+  set document(author: "Michael Reinegger", title: "Resume")
+  set text(font: "Lucida Sans", lang: "en", weight: "medium", size: 10pt)
   set page(margin: (left: 5mm, right: 5mm, top: 10mm, bottom: 5mm))
 
   // Define consistent colors
@@ -60,7 +60,7 @@
         ]
         #text(24pt, weight: "bold", primary-color)[Michael Reinegger]
 
-        == KONTAKT
+        == CONTACT
         #box(width: 100%)[
           #set par(leading: 1em)
           #text(fill: text-gray)[
@@ -75,7 +75,7 @@
         ]
 
         #v(0.5em)
-        == Fähigkeiten
+        == SKILLS
         #text(weight: "bold")[Frontend]
         #stack(
           spacing: 0.5em,
@@ -123,29 +123,29 @@
           skill-with-level("RESTful APIs", 0.6, "api"),
         )
 
-        == SPRACHEN
-        - Deutsch (Muttersprache)
-        - Englisch (B2)
+        == LANGUAGES
+        - German (Native)
+        - English (B2)
         #v(1em)
 
-        == SONSTIGES
-        - PKW-Führerschein
+        == OTHER
+        - Driver's License (B)
         #v(1em)
 
         == HOBBIES
-        - Programmieren
+        - Programming
         - Capture The Flag
-        - Laufen (Weitester Lauf: Wolfganseelauf)
-        - 3D-Druck und CAD-Modellierung (#link("https://www.printables.com/@MrCode_1053723")[3D-Modelle])
+        - Running (Longest Run: Wolfganseelauf)
+        - 3D Printing and CAD Modeling (#link("https://www.printables.com/@MrCode_1053723")[3D Models])
         - Arduino, Raspberry Pi
-        - Kochen und Backen
-        - Wandern
-        - Klettern
+        - Cooking and Baking
+        - Hiking
+        - Climbing
       ]
     }),
     // Right column
     [
-      = AUSBILDUNG
+      = EDUCATION
 
       #let education-entry(degree, institution, period, details) = block(
         width: 100%,
@@ -172,19 +172,24 @@
         ]
       ]
 
-      #education-entry("Computer Science Master", "Johannes Kepler Universität Linz", "2024 - Heute", (
+      #education-entry("Computer Science Master", "Johannes Kepler University Linz", "2024 - Present", (
         "Major: Networks and IT Security",
       ))
 
-      #education-entry("Bachelor Informatik", "Johannes Kepler Universität Linz", "2021 - 2024", (
-        "Bachelorarbeit: Optimizing LSTM-based Speaker Diarization: Comparing Architectures and Clustering Methods",
+      #education-entry("Bachelor in Computer Science", "Johannes Kepler University Linz", "2021 - 2024", (
+        "Bachelor Thesis: Optimizing LSTM-based Speaker Diarization: Comparing Architectures and Clustering Methods",
       ))
 
-      #education-entry("BHS Matura Mechatronik", "Höhere Technische Lehranstalt Steyr", "2015 - 2020", (
-        "Schwerpunkt: Mechatronik",
-      ))
+      #education-entry(
+        "Higher Technical College Matura Mechatronics",
+        "Höhere Technische Lehranstalt Steyr",
+        "2015 - 2020",
+        (
+          "Focus: Mechatronics",
+        ),
+      )
 
-      = BERUFSERFAHRUNG
+      = PROFESSIONAL EXPERIENCE
 
       #let experience-entry(role, company, period, details) = block(
         width: 100%,
@@ -219,83 +224,83 @@
 
       // Remove the outer block and stack, just list entries directly
       #experience-entry(
-        "Intern Softwareentwicklung",
+        "Intern Software Development",
         "Dynatrace Austria - Engineering Headquarters",
         "08.2025 - 09.2025",
         (
-          "Entwicklung internen Berechtinungsmanagement Tools",
+          "Development of internal authorization management tool",
         ),
       )
 
-      #experience-entry("Studentischer Mitarbeiter", "JKU Linz - Institute für Complexe Systems", "10.2024 - 06.2025", (
-        "Korrektur von Hausaufgaben für Digitale Schaltungen",
-        "Korrektur von Hausaufgaben für Rechnerarchitektur",
+      #experience-entry("Student Assistant", "JKU Linz - Institute for Complex Systems", "10.2024 - 06.2025", (
+        "Correction of homework for Digital Circuits",
+        "Correction of homework for Computer Architecture",
       ))
 
       #v(5pt) // Add some spacing between entries
 
-      #experience-entry("Ferialpraktikant - Softwareentwicklung", "Ventopay GmbH - Hagenberg", "07.2024 - 07.2024", (
-        "Angular und C# Weiterentwicklung eines bestehenden Systems",
-        "UI/UX Entwicklung mit Fokus auf Barrierefreiheit",
+      #experience-entry("Summer Intern - Software Development", "Ventopay GmbH - Hagenberg", "07.2024 - 07.2024", (
+        "Angular and C# development of an existing system",
+        "UI/UX development with focus on accessibility",
       ))
 
       #v(5pt) // Add some spacing between entries
 
-      #experience-entry("Studentischer Mitarbeiter", "JKU Linz - Institute for Complex Systems", "10.2023 - 06.2024", (
-        "Korrektur von Hausaufgaben für Digitale Schaltungen",
-        "Korrektur von Hausaufgaben für Rechnerarchitektur",
+      #experience-entry("Student Assistant", "JKU Linz - Institute for Complex Systems", "10.2023 - 06.2024", (
+        "Correction of homework for Digital Circuits",
+        "Correction of homework for Computer Architecture",
       ))
 
       #v(5pt) // Add some spacing between entries
 
       #experience-entry(
-        "Ferialpraktikant - Softwareentwicklung",
+        "Summer Intern - Software Development",
         "Bosch GMBH - Engineering Center Linz",
         "08.2023 - 09.2023",
         (
-          "Entwicklung eines Dashboard für Team relevante Informationen mit Sveltekit und TailwindCSS",
-          "Datenabfrage und -verarbeitung mit RESTful APIs, Proxy APIs und HTML-Scraping",
+          "Development of a dashboard for team-relevant information with Sveltekit and TailwindCSS",
+          "Data querying and processing with RESTful APIs, Proxy APIs and HTML-Scraping",
         ),
       )
 
       #v(5pt) // Add some spacing between entries
 
-      #experience-entry("Ferialpraktikant - Montage und Testen", "Bosch Rexroth GMBH - Pasching", "06.2021 - 06.2021", (
-        "Montage von Kabelschächten und Schaltkästen",
-        "Aufbau und Testen hydraulischer Anlagen",
+      #experience-entry("Summer Intern - Assembly and Testing", "Bosch Rexroth GMBH - Pasching", "06.2021 - 06.2021", (
+        "Assembly of cable ducts and switch cabinets",
+        "Setup and testing of hydraulic systems",
       ))
 
       #v(5pt) // Add some spacing between entries
 
-      #experience-entry("Zivildiener", "Herz-Kreislauf-Zentrum - Bad Ischl", "09.2020 - 05.2021", (
-        "Unterstützung des Büropersonals",
-        "Betreuung von Patienten",
+      #experience-entry("Civil Servant", "Herz-Kreislauf-Zentrum - Bad Ischl", "09.2020 - 05.2021", (
+        "Support of office staff",
+        "Care of patients",
       ))
 
       #v(5pt) // Add some spacing between entries
 
-      #experience-entry("Pflichtpraktikum", "Engel Austria GMBH - Dietach", "07.2018 - 07.2018", (
-        "Datenverarbeitung mit Excel",
-        "Mithilfe in der Fertigung",
+      #experience-entry("Mandatory Internship", "Engel Austria GMBH - Dietach", "07.2018 - 07.2018", (
+        "Data processing with Excel",
+        "Assistance in production",
       ))
 
       #v(5pt) // Add some spacing between entries
 
-      #experience-entry("Pflichtpraktikum", "Engel Austria GMBH - St. Valentin", "07.2017 - 07.2017", (
-        "Mithilfe in der Fertigung",
-        "Elektrische Verkabelung von Spritzgießmaschinen",
+      #experience-entry("Mandatory Internship", "Engel Austria GMBH - St. Valentin", "07.2017 - 07.2017", (
+        "Assistance in production",
+        "Electrical wiring of injection molding machines",
       ))
 
-      = PROJEKTE
+      = PROJECTS
 
       #experience-entry(
         "HTML, CSS, JavaScript, GitHub Actions, Caddy Server",
-        "Persönliche Homepage - mljr.eu",
+        "Personal Homepage - mljr.eu",
         link("https://mljr.eu")[mljr.eu],
         (
-          "Entwicklung einer persönlichen Website",
-          "Landingpage und Lebenslauf mit HTML, CSS und JavaScript",
-          "Verwenden von GitHub Actions für CI/CD",
+          "Development of a personal website",
+          "Landing page and resume with HTML, CSS and JavaScript",
+          "Use of GitHub Actions for CI/CD",
         ),
       )
 
@@ -303,36 +308,36 @@
 
       #experience-entry(
         "SvelteKit, Pocketbase, go, TailwindCSS, RESTful APIs",
-        "Sudoku Generator und Printer",
+        "Sudoku Generator and Printer",
         (link("https://github.com/MrCodeEU/sudoku-gen")[Github], link("https://sudoku.mljr.eu")[sudoku.mljr.eu]),
         (
-          "Speichern von generierten Sudokus in einer Datenbank",
-          "Filtern von Sudokus zum Drucken mit oder ohne Lösung und Farben",
-          "Unterstützung für 9x9, 12x12 und 16x16 Sudokus",
+          "Storing generated Sudokus in a database",
+          "Filtering Sudokus for printing with or without solution and colors",
+          "Support for 9x9, 12x12 and 16x16 Sudokus",
         ),
       )
       #v(5pt)
 
       #experience-entry(
         "Python, Torch, Pyannote, Keras, Scikit-learn, Matplotlib",
-        "Bachelorarbeit - Speaker Diarization",
+        "Bachelor Thesis - Speaker Diarization",
         link("https://github.com/MrCodeEU/LSTM-Based-Speaker-Diarization")[Github],
         (
-          "Implementierung von LSTM-Netzwerken für Speaker Diarization",
-          "Training und Evaluierung verschiedener Modelle",
-          "Vergleich verschiedener Clustering Methoden und Architekturen",
+          "Implementation of LSTM networks for Speaker Diarization",
+          "Training and evaluation of different models",
+          "Comparison of different clustering methods and architectures",
         ),
       )
       #v(5pt)
 
       // #experience-entry(
       //   "Flutter, Dart, Kotlin (Ktor), PocketBase, SQL",
-      //   "Brettspiele Statistik App",
-      //   link("https://github.com/MrCodeEU/")[In Entwicklung],
+      //   "Board Games Statistics App",
+      //   link("https://github.com/MrCodeEU/")[In Development],
       //   (
-      //     "Accountverwaltung und Statistiken für Brettspiele",
-      //     "Entwicklung einer mobilen App und Webseite mit Flutter",
-      //     "Eine REST API für die Kommunikation mit der SQL-Datenbank"
+      //     "Account management and statistics for board games",
+      //     "Development of a mobile app and website with Flutter",
+      //     "A REST API for communication with the SQL database"
       //   )
       // )
 
@@ -344,9 +349,9 @@
           link("https://mljr.eu/game-of-life/")[mljr.eu/game-of-life/],
         ),
         (
-          "Implementierung des Conway's Game of Life in Kotlin Multiplatform",
-          "Verwendung von Compose für die Benutzeroberfläche",
-          "Bereitstellung für Android, Web und Desktop",
+          "Implementation of Conway's Game of Life in Kotlin Multiplatform",
+          "Use of Compose for the user interface",
+          "Deployment for Android, Web and Desktop",
         ),
       )
     ],
