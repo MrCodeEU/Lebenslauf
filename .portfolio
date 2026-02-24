@@ -1,0 +1,9 @@
+{
+  "description": "A professional curriculum vitae and cover letter written in Typst, showcasing the Typst typesetting system as a modern, code-first alternative to LaTeX for structured document design.",
+  "featured": false,
+  "tags": ["typst", "cv", "resume", "typesetting", "document"],
+  "images": [
+    "https://picsum.photos/seed/lebenslauf1/800/450",
+    "https://picsum.photos/seed/lebenslauf2/800/450"
+  ]
+}
